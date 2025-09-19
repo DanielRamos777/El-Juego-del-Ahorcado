@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Juego del Ahorcado</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./responsive.css" />
+</head>
+<body>
+  <header>
+    <h1>🎯 El Juego del Ahorcado</h1>
+    <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
+  </header>
+
+  <main>
+    <!-- Sección de configuración -->
+    <section id="settings">
+      <label for="dificultad">Dificultad (longitud de palabra):</label>
+      <select id="dificultad">
+        <option value="3">3 letras</option>
+        <option value="4">4 letras</option>
+        <option value="5">5 letras</option>
+        <option value="6">6 letras</option>
+        <option value="7">7 letras</option>
+      </select>
+      <button id="start-btn">Comenzar</button>
+    </section>
+
+    <!-- Sección del juego -->
+    <section id="game" class="oculto">
+      <canvas id="hangman" width="250" height="250"></canvas>
+
+      <p id="word"></p>
+      <p id="letters"></p>
+
+      <!-- Teclado virtual para móviles -->
+      <div id="keyboard"></div>
+
+      <!-- Entrada opcional para PC -->
+      <div id="input-container">
+        <input type="text" id="guess-input" maxlength="1" placeholder="Ingresa una letra" />
+        <button id="guess-btn">Probar</button>
+      </div>
+
+      <p id="message"></p>
+      <button id="reset-btn">Reiniciar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 El Juego del Ahorcado Responsive</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
